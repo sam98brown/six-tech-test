@@ -490,12 +490,13 @@ main#site-content section#featured header.section-header h2.post-title {
   margin-right: 100px;
 }
 
-main#site-content section#featured article#post-content .col-sm-3 {
+main#site-content section#featured article#post-content .post-card {
   padding-right: 50px;
 }
 
 main#site-content section#featured article#post-content nav {
   margin-top: 200px;
+  padding-bottom: 50px;
 }
 
 main#site-content section#featured article#post-content nav ul {
@@ -816,5 +817,80 @@ body::after {
   height: 12px;
   background: transparent -webkit-gradient(linear, right top, left top, from(#05E6DD), to(#1445C7)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(270deg, #05E6DD 0%, #1445C7 100%) 0% 0% no-repeat padding-box;
+}
+
+@media only screen and (max-width: 1450px) {
+  .section-title {
+    font-size: 40px;
+  }
+  main#site-content section#featured header.section-header h2.post-title {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 1283px) {
+  main#site-content section#featured header.section-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main#site-content section#featured header.section-header h2.post-title {
+    float: left;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .post-card img {
+    max-height: 500px;
+  }
+  main#site-content section#featured article#post-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-right: 98px;
+  }
+  main#site-content section#featured article#post-content nav {
+    margin-top: 50px;
+  }
+  main#site-content section#popular .articles article {
+    margin-bottom: 50px;
+  }
+  main#site-content section#popular .articles article:last-of-type {
+    margin-bottom: 0px;
+  }
+  main#site-content section#apply > header {
+    padding: 100px;
+    display: block;
+  }
+  main#site-content section#apply .row .image-section img {
+    border-radius: 0;
+  }
+  main#site-content section#apply .row .text-section {
+    padding: 100px 100px;
+  }
+  main#site-content section#apply {
+    padding-bottom: 0px;
+  }
+  footer#site-footer .logo-socials {
+    margin-bottom: 50px;
+  }
+  footer#site-footer .logo-socials a.logo {
+    margin-bottom: 25px;
+  }
+  footer#site-footer .site-links nav {
+    margin-bottom: 50px;
+  }
+  footer#site-footer .site-links nav:last-of-type {
+    margin-bottom: 0px;
+  }
+  footer#site-footer .site-credits ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */

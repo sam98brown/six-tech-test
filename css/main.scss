@@ -321,11 +321,13 @@ body.container-fluid {
   margin: 0;
 }
 
+$container-padding: 98px;
+
 .pad-left {
-  padding-left: 98px;
+  padding-left: $container-padding;
 }
 .pad-right {
-  padding-right: 98px;
+  padding-right: $container-padding;
 }
 
 
@@ -489,12 +491,13 @@ main#site-content {
       }
     }
     article#post-content {
-      .col-sm-3 {
+      .post-card {
         padding-right: 50px;
       }
       
       nav {
         margin-top: 200px;
+        padding-bottom: 50px;
         ul {
           margin:0;
           padding:0;
@@ -683,9 +686,6 @@ footer#site-footer {
           &:last-of-type {
             margin-right: 0;
           }
-          a {
-
-          }
         }
       }
     }
@@ -744,4 +744,87 @@ body::after {
   display: block;
   height: 12px;
   background: transparent linear-gradient(270deg, #05E6DD 0%, #1445C7 100%) 0% 0% no-repeat padding-box;
+}
+
+
+
+// Responsive
+
+@media only screen and (max-width:1450px) {
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  main#site-content section#featured header.section-header h2.post-title {
+    font-size: 40px;
+  }
+}
+
+
+@media only screen and (max-width: 1283px) {
+
+  main#site-content section#featured header.section-header {
+    flex-direction: column;
+    h2.post-title {
+      float: left;
+      margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  
+  .post-card img {
+    max-height: 500px;
+  }
+
+  main#site-content section#featured article#post-content {
+    flex-direction: column-reverse;
+    padding-right: $container-padding;
+    nav {
+      margin-top: 50px;
+    }
+  }
+
+  main#site-content section#popular .articles article {
+    margin-bottom: 50px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  main#site-content section#apply > header {
+    padding: 100px;
+    display: block;
+  }
+  main#site-content section#apply .row .image-section img {
+    border-radius: 0;
+  }
+  main#site-content section#apply .row .text-section {
+    padding: 100px 100px;
+  }
+  main#site-content section#apply {
+    padding-bottom: 0px;
+  } 
+  footer#site-footer {
+    .logo-socials {
+        margin-bottom: 50px;
+        a.logo {
+          margin-bottom: 25px;
+        }
+    }
+    .site-links {
+      nav {
+        margin-bottom: 50px;
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .site-credits {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
 }
