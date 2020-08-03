@@ -14,6 +14,7 @@ $light-grey: #F4F4F4;
 $dark-grey: #7A8890;
 $black: #292E3A;
 $blue: #1445C7;
+$cyan: #05E6DD;
 
 
 /* ==========================================================================
@@ -327,10 +328,28 @@ body.container-fluid {
   padding-right: 98px;
 }
 
+
+//Typography
+
+h6 {
+  font: 500 14px 'suisse_intlmedium', sans-serif;
+  letter-spacing: 1.4px;
+  color:#4C5A68;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 18px;
+  letter-spacing: -0.34px;
+}
+
 //post card styling
 .post-card {
+  img {
+    border-radius: 7px;
+  }
   header {
-    margin-bottom: 35px;
+    margin: 30px auto;
     h3 {
       color: $dark-grey;
       font-size: 34px;
@@ -552,11 +571,167 @@ main#site-content {
         }
         .post-card {
           margin-top: auto;
-          img {
-            border-radius: 5px;
+        }
+      }
+    }
+  }
+  section#apply {
+    background-color: $light-grey;
+    padding-bottom: 120px;
+    > header {
+      padding: 170px 0px;
+      display: flex;
+      align-content: flex-end;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-right: 300px;
+      h2 {
+        font-size: 60px;
+        margin-bottom: 0px;
+        span {
+          color:$dark-grey;
+        }
+      }
+    }
+    .row {
+      .image-section {
+        img {
+          border-radius: 7px;
+        }
+      }
+      .text-section {
+        align-self: flex-end;
+        padding: 0px 100px;
+        header {
+          margin-bottom: 40px;
+          h2 {
+            font: 500 34px 'suisse_intlmedium', sans-serif;
+            letter-spacing: -0.34px;
           }
-          header {
-            margin: 30px auto;
+          h6 {
+            margin-bottom: 20px;
+          }    
+        }
+        a.button {
+          display: inline-block;
+          margin-top: 40px;
+          padding: 18px 24px;
+          background: $black 0% 0% no-repeat padding-box;
+          border-radius: 6px;
+          font: 12px 'suisse_intl_monoregular', monospace;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          color:white;
+        }
+      }
+    }
+  }
+  section#recent-highlights {
+    padding: 100px 0px;
+    > header {
+      display: flex;
+      margin-bottom: 100px;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        margin-bottom: 0;
+      }
+      span.view-all {
+        color: $dark-grey;
+        font: 500 22px 'suisse_intlmedium', sans-serif;
+        font-size: 22px;
+        a {
+          color:$dark-grey;
+          text-decoration: underline;
+          text-decoration-color: $cyan;
+        }
+      }
+    }
+    .post-loop {
+      display: flex;
+      flex-wrap: wrap;
+      article {
+        margin-top: auto;
+        margin-bottom: 100px;
+        .post-card {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+footer#site-footer {
+  .logo-socials {
+    display: flex;
+    flex-direction: column;
+    a.logo {
+      img {
+        width: 150px;
+      }
+    }
+    nav#social-links {
+      margin-top: auto;
+      ul {
+        margin:0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        li {
+          margin-right: 20px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          a {
+
+          }
+        }
+      }
+    }
+  }
+  .site-links {
+    nav {
+      h6 {
+        margin-bottom: 15px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          margin-bottom: 15px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          a {
+            color:$black;
+            font: 500 22px 'suisse_intlmedium', sans-serif;
+          }
+        }
+      }
+    }
+  }
+  .site-credits {
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    p.copyright, .credit-links ul li a {
+      font: 400 14px 'suisse_intlbook', sans-serif;
+      color: $dark-grey;
+    }
+    .credit-links {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+          a {
+            strong {
+              color: $black;
+            }
           }
         }
       }
@@ -564,3 +739,9 @@ main#site-content {
   }
 }
 
+body::after {
+  content: '';
+  display: block;
+  height: 12px;
+  background: transparent linear-gradient(270deg, #05E6DD 0%, #1445C7 100%) 0% 0% no-repeat padding-box;
+}
