@@ -871,7 +871,7 @@ body::after {
   background: transparent linear-gradient(270deg, #05E6DD 0%, #1445C7 100%) 0% 0% no-repeat padding-box;
 }
 
-.hamburger {
+#site-header .hamburger {
   display: none;
 }
 
@@ -933,7 +933,7 @@ body {
     display: none;
   }
   #site-header .hamburger {
-    display: block;
+    display: inline-block;
   }
 }
 
