@@ -885,34 +885,40 @@ body {
     max-height: 500px;
   }
 
-  main#site-content section#featured article#post-content {
-    flex-direction: column-reverse;
-    padding-right: $container-padding;
-    nav {
-      margin-top: 50px;
+  main#site-content {
+    section#featured {
+      article#post-content {
+        flex-direction: column-reverse;
+        padding-right: $container-padding;
+        nav {
+          margin-top: 50px;
+        }
+      }
+      header.section-header h2.post-title {
+        width: auto;
+      }
     }
-  }
-  main#site-content section#featured header.section-header h2.post-title {
-    width: auto;
-  }
-  main#site-content section#popular .articles article {
-    margin-bottom: 50px;
-    &:last-of-type {
-      margin-bottom: 0px;
+    section#popular .articles article {
+      margin-bottom: 50px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
     }
-  }
-  main#site-content section#apply > header {
-    padding: 100px;
-    display: block;
-  }
-  main#site-content section#apply .row .image-section img {
-    border-radius: 0;
-  }
-  main#site-content section#apply .row .text-section {
-    padding: 100px 100px;
-  }
-  main#site-content section#apply {
-    padding-bottom: 0px;
+    section#apply {
+      padding-bottom: 0;
+      > header {
+        padding: 100px;
+        display: block;
+      }
+      .row {
+        .image-section img {
+          border-radius: 0;
+        }
+        .text-section {
+          padding: 100px 100px;
+        }
+      }
+    }
   } 
   footer#site-footer {
     .logo-socials {
@@ -938,20 +944,26 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
-  main#site-content section#apply > header {
-    padding: 60px;
-    h2 {
-      font-size: 40px;
+  main#site-content {
+    section#apply {
+      > header {
+        padding: 60px;
+        h2 {
+          font-size: 40px;
+        }
+      }
+      .row .text-section {
+        padding: 50px 30px;
+      }
     }
-  }
-  main#site-content section#apply .row .text-section {
-    padding: 50px 30px;
-  }
-  main#site-content section#recent-highlights > header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  main#site-content section#recent-highlights > header h2 {
-    margin-bottom: 10px;
+    section#recent-highlights {
+      > header {
+        align-items: flex-start;
+        flex-direction: column;    
+        h2 {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

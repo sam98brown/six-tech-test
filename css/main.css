@@ -979,6 +979,9 @@ body {
   main#site-content section#popular .articles article:last-of-type {
     margin-bottom: 0px;
   }
+  main#site-content section#apply {
+    padding-bottom: 0;
+  }
   main#site-content section#apply > header {
     padding: 100px;
     display: block;
@@ -988,9 +991,6 @@ body {
   }
   main#site-content section#apply .row .text-section {
     padding: 100px 100px;
-  }
-  main#site-content section#apply {
-    padding-bottom: 0px;
   }
   footer#site-footer .logo-socials {
     margin-bottom: 50px;
