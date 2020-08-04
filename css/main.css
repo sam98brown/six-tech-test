@@ -351,7 +351,7 @@ p {
   width: 60px;
 }
 
-#site-header nav#main-navigation {
+nav.main-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,7 +360,7 @@ p {
           align-items: center;
 }
 
-#site-header nav#main-navigation ul {
+nav.main-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,11 +368,11 @@ p {
   list-style: none;
 }
 
-#site-header nav#main-navigation ul li {
+nav.main-navigation ul li {
   margin-right: 40px;
 }
 
-#site-header nav#main-navigation ul li a {
+nav.main-navigation ul li a {
   text-align: left;
   font: 12px 'suisse_intlmedium', sans-serif;
   letter-spacing: 1.2px;
@@ -382,20 +382,20 @@ p {
   transition: color 0.2s;
 }
 
-#site-header nav#main-navigation ul li a:hover {
+nav.main-navigation ul li a:hover {
   color: #333a3e;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
   text-decoration: none;
 }
 
-#site-header #account-bar {
+.account-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#site-header #account-bar .user-bar {
+.account-bar .user-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,19 +405,19 @@ p {
   margin-right: 30px;
 }
 
-#site-header #account-bar .user-bar span {
+.account-bar .user-bar span {
   font: 14px/40px 'suisse_intlbook', sans-serif;
   color: #292E3A;
   margin-right: 15px;
 }
 
-#site-header #account-bar .user-bar .user-avatar {
+.account-bar .user-bar .user-avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#site-header #account-bar .user-bar .user-avatar .user-image {
+.account-bar .user-bar .user-avatar .user-image {
   width: 35px;
   height: 35px;
   position: relative;
@@ -426,7 +426,7 @@ p {
   margin-right: 10px;
 }
 
-#site-header #account-bar .user-bar .user-avatar .down-arrow {
+.account-bar .user-bar .user-avatar .down-arrow {
   width: 13px;
   height: 8px;
   -ms-flex-item-align: center;
@@ -434,13 +434,13 @@ p {
       align-self: center;
 }
 
-#site-header #account-bar .actions {
+.account-bar .actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#site-header #account-bar .actions button {
+.account-bar .actions button {
   background-color: white;
   font-size: 0px;
   border: none;
@@ -458,13 +458,65 @@ p {
           justify-content: center;
 }
 
-#site-header #account-bar .actions button img {
+.account-bar .actions button img {
   width: 20px;
   height: 20px;
 }
 
-main#site-content {
-  margin-top: 90px;
+#mobile-menu {
+  padding: 20px;
+}
+
+#mobile-menu nav.main-navigation {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#mobile-menu nav.main-navigation a.site-logo {
+  margin-bottom: 20px;
+}
+
+#mobile-menu nav.main-navigation ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+#mobile-menu nav.main-navigation ul li {
+  margin-right: 0;
+}
+
+#mobile-menu nav.main-navigation ul li a {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #7A8890;
+}
+
+#mobile-menu .account-bar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mobile-menu .account-bar .user-bar {
+  margin-right: 0;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+#mobile-menu .account-bar .actions button:last-of-type {
+  border-right: 1px solid #B8C5CA;
 }
 
 main#site-content section#featured {
@@ -819,12 +871,69 @@ body::after {
   background: transparent linear-gradient(270deg, #05E6DD 0%, #1445C7 100%) 0% 0% no-repeat padding-box;
 }
 
+.hamburger {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF;
+  /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
 @media only screen and (max-width: 1450px) {
   .section-title {
     font-size: 40px;
   }
   main#site-content section#featured header.section-header h2.post-title {
     font-size: 40px;
+  }
+  #site-header nav.main-navigation ul {
+    display: none;
+  }
+  #site-header .account-bar {
+    display: none;
+  }
+  #site-header .hamburger {
+    display: block;
   }
 }
 
@@ -842,6 +951,12 @@ body::after {
 }
 
 @media only screen and (max-width: 991px) {
+  .pad-left {
+    padding-left: 30px;
+  }
+  .pad-right {
+    padding-right: 30px;
+  }
   .post-card img {
     max-height: 500px;
   }
@@ -854,6 +969,9 @@ body::after {
   }
   main#site-content section#featured article#post-content nav {
     margin-top: 50px;
+  }
+  main#site-content section#featured header.section-header h2.post-title {
+    width: auto;
   }
   main#site-content section#popular .articles article {
     margin-bottom: 50px;
@@ -891,6 +1009,30 @@ body::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  main#site-content section#apply > header {
+    padding: 60px;
+  }
+  main#site-content section#apply > header h2 {
+    font-size: 40px;
+  }
+  main#site-content section#apply .row .text-section {
+    padding: 50px 30px;
+  }
+  main#site-content section#recent-highlights > header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main#site-content section#recent-highlights > header h2 {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
