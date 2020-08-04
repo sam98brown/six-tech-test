@@ -937,6 +937,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 1308px) and (min-width: 1038px) {
+  footer#site-footer .site-links nav ul li a {
+    font-size: 17px;
+  }
+}
+
 @media only screen and (max-width: 1283px) {
   main#site-content section#featured header.section-header {
     -webkit-box-orient: vertical;
@@ -947,6 +953,52 @@ body {
   main#site-content section#featured header.section-header h2.post-title {
     float: left;
     margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1038px) {
+  footer#site-footer > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer#site-footer .logo-socials {
+    margin-bottom: 50px;
+  }
+  footer#site-footer .logo-socials a.logo {
+    margin-bottom: 25px;
+  }
+  footer#site-footer .site-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer#site-footer .site-links nav {
+    margin-bottom: 50px;
+  }
+  footer#site-footer .site-links nav:last-of-type {
+    margin-bottom: 0px;
+  }
+  footer#site-footer .site-links nav.col-lg-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  footer#site-footer .site-credits {
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer#site-footer .site-credits ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -991,24 +1043,6 @@ body {
   }
   main#site-content section#apply .row .text-section {
     padding: 100px 100px;
-  }
-  footer#site-footer .logo-socials {
-    margin-bottom: 50px;
-  }
-  footer#site-footer .logo-socials a.logo {
-    margin-bottom: 25px;
-  }
-  footer#site-footer .site-links nav {
-    margin-bottom: 50px;
-  }
-  footer#site-footer .site-links nav:last-of-type {
-    margin-bottom: 0px;
-  }
-  footer#site-footer .site-credits ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
