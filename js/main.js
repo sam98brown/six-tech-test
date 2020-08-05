@@ -1,53 +1,39 @@
+//Slideout menu functionality
+window.addEventListener('DOMContentLoaded', function () {
 
-$( document ).ready(function() {
-  //new WOW().init();
+  var btnSidebar = document.querySelector('.hamburger');
+  var blockFixed = document.querySelector('#site-header');
+  var blockMain = document.querySelector('#panel');
+  var blockSidebar = document.querySelector('#mobile-menu');
+  var blockSidebarWidth = 300;
 
-//Hamburger icon functionality
-
-// Look for .hamburger
-  var hamburger = document.querySelector(".hamburger");
-  // On click
-  hamburger.addEventListener("click", function() {
-    // Toggle class "is-active"
-    hamburger.classList.toggle("is-active");
-    slideout.toggle();
-    // Do something else, like open/close menu
+  var slideoutSidebar = new Slideout({
+      'panel': blockMain,
+      'menu': blockSidebar,
+      'padding': blockSidebarWidth,
+      'tolerance': 70,
+      'side': 'right', // move sidebar to right
+      'touch': false
   });
 
-//Slideout menu functionality
+  btnSidebar.addEventListener('click', function () {
+    btnSidebar.classList.toggle("is-active");
+    slideoutSidebar.toggle();
+  });
 
-var slideout = new Slideout({
-  'panel': document.getElementById('panel'),
-  'menu': document.getElementById('mobile-menu'),
-  'padding': 300,
-  'tolerance': 70,
-  'side': 'right'
-});
+  slideoutSidebar.on('beforeopen', function () {
+      blockFixed.classList.add('fixed-open');
+  });
 
-//Slideout fix for sticky header
-var fixed = document.querySelector('.hamburger');
+  slideoutSidebar.on('beforeclose', function () {
+      blockFixed.classList.remove('fixed-open');
+  });
 
-slideout.on('translate', function(translated) {
-  fixed.style.transform = 'translateX(' + translated + 'px)';
-});
+}, false);
 
-slideout.on('beforeopen', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(-300px)';
-});
-
-slideout.on('beforeclose', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(0px)';
-});
-
-slideout.on('open', function () {
-  fixed.style.transition = '';
-});
-
-slideout.on('close', function () {
-  fixed.style.transition = '';
-});
+$( document ).ready(function() {
+  //Setting up wow.js
+  new WOW().init();
 
   $('#featured nav ul li button').click(function(){
     if(!$(this).parent('li').hasClass('active')) {
