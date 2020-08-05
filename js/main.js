@@ -1,6 +1,6 @@
 
 $( document ).ready(function() {
-  new WOW().init();
+  //new WOW().init();
 
 //Hamburger icon functionality
 
@@ -22,6 +22,31 @@ var slideout = new Slideout({
   'padding': 300,
   'tolerance': 70,
   'side': 'right'
+});
+
+//Slideout fix for sticky header
+var fixed = document.querySelector('.hamburger');
+
+slideout.on('translate', function(translated) {
+  fixed.style.transform = 'translateX(' + translated + 'px)';
+});
+
+slideout.on('beforeopen', function () {
+  fixed.style.transition = 'transform 300ms ease';
+  fixed.style.transform = 'translateX(-300px)';
+});
+
+slideout.on('beforeclose', function () {
+  fixed.style.transition = 'transform 300ms ease';
+  fixed.style.transform = 'translateX(0px)';
+});
+
+slideout.on('open', function () {
+  fixed.style.transition = '';
+});
+
+slideout.on('close', function () {
+  fixed.style.transition = '';
 });
 
   $('#featured nav ul li button').click(function(){

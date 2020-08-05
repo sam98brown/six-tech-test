@@ -326,19 +326,24 @@ p {
 }
 
 #site-header {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
+  width: 100%;
+  height: 50px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 2;
   top: 0;
   left: 0;
   height: 90px;
   width: 100%;
   background-color: white;
-  z-index: 9;
+  z-index: 2;
 }
 
 #site-header a.site-logo {
@@ -619,22 +624,6 @@ main#site-content section#featured nav ul li button {
 main#site-content section#popular {
   padding-top: 100px;
   padding-bottom: 100px;
-  /*.articles {
-      display: block;
-      overflow: auto;
-      white-space: nowrap;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      article {
-        width: 425px;
-        display: inline-block;
-        white-space: normal;
-        h2.post-title {
-          font-size: 34px;
-        }
-      }  
-    }*/
 }
 
 main#site-content section#popular .articles {
@@ -897,7 +886,8 @@ body {
   min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  z-index: 0;
+  z-index: 3;
+  background-color: white;
   display: none;
 }
 
@@ -934,6 +924,9 @@ body {
   }
   main#site-content section#featured header.section-header h2.post-title {
     font-size: 40px;
+  }
+  #site-header {
+    border-bottom: 1px solid #F4F4F4;
   }
   #site-header nav.main-navigation ul {
     display: none;
