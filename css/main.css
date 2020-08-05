@@ -39,7 +39,7 @@ html {
 p {
   color: #292E3A;
 }
-
+.wow { visibility: hidden; }
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
