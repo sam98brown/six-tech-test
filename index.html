@@ -6,13 +6,17 @@
   <title>WLTH</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileColor" content="#2d89ef">
   <meta name="theme-color" content="#ffffff">
+  
+  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,7 +28,7 @@
 <div id="panel">
   <header id="site-header">
     <nav class="main-navigation">
-      <a class="site-logo" href="index.html"><img src="img/wlth-logo.png" alt="WLTH" title="WLTH"></a>
+      <a class="site-logo" href="index.html"><img src="img/logo.svg" alt="WLTH" title="WLTH"></a>
       <ul>
         <li><a href="#">To your door</a></li>
         <li><a href="#">Going out</a></li>
@@ -42,16 +46,16 @@
           <div class="user-image">
             <img src="img/user.jpg" alt="Your profile picture" title="Your profile picture">
           </div>
-          <img class="down-arrow" src="img/down-arrow.png" alt="Down arrow">
+          <img class="down-arrow" src="img/down-arrow.svg" alt="Down arrow">
         </div>
       </div>
       <div class="actions">
         <button name="pin">
-          <img src="img/pin.png" alt="Pin icon">
+          <img src="img/pin.svg" alt="Pin icon">
           Pin this page
         </button>
         <button name="search">
-          <img src="img/search.png" alt="Search icon">
+          <img src="img/search.svg" alt="Search icon">
           Search this site
         </button>
       </div>
@@ -70,12 +74,14 @@
           <h2 class="section-title">Featured</h2>
         </div>
         <div class="col-lg-8">
-          <h2 class="post-title">Big weekend at BASE Dubai in d3, with British pop superstar Rita Ora</h2>
+          <h2 class="post-title featured-post post-id-1">Big weekend at BASE Dubai in d3, with British pop superstar Rita Ora</h2>
+          <h2 class="post-title featured-post post-id-2">Take to the sky in a hot air balloon and watch the horizon light up</h2>
+          <h2 class="post-title featured-post post-id-3">Ride a desert motorcross bike or a dune buggy, or you'd be driven by the pros</h2>
         </div>
       </header>
-      <article id="post-content" class="row no-gutters pad-left">
+      <article class="post-content row no-gutters pad-left">
         <div class="col-lg-3">
-          <div class="post-card">
+          <div class="post-card featured-post post-id-1">
             <header>
               <h3>Event</h3>
               <h2>Big weekend at BASE Dubai in d3, with British pop superstar Rita Ora</h2>
@@ -83,6 +89,26 @@
             <footer>
               <h4>W+500</h4>
               <h5>Dubai</h5>
+            </footer>
+          </div>
+          <div class="post-card featured-post post-id-2">
+            <header>
+              <h3>Event</h3>
+              <h2>Take to the sky in a hot air balloon and watch the horizon light up</h2>
+            </header>
+            <footer>
+              <h4>W+350</h4>
+              <h5>Venice</h5>
+            </footer>
+          </div>
+          <div class="post-card featured-post post-id-3">
+            <header>
+              <h3>Experience</h3>
+              <h2>Ride a desert motorcross bike or a dune buggy, or you'd be driven by the pros</h2>
+            </header>
+            <footer>
+              <h4>W+125</h4>
+              <h5>Byron Bay</h5>
             </footer>
           </div>
           <nav>
@@ -94,7 +120,9 @@
           </nav>
         </div>
         <div class="col-lg-9">
-          <img src="img/featured-img.jpg" alt="Big weekend at BASE Dubai in d3, with British pop superstar Rita Ora">
+          <img class="post-image featured-post post-id-1" src="img/featured-img.jpg" alt="Big weekend at BASE Dubai in d3, with British pop superstar Rita Ora">
+          <img class="post-image featured-post post-id-2" src="img/featured-img-2.jpg" alt="Take to the sky in a hot air balloon and watch the horizon light up">
+          <img class="post-image featured-post post-id-3" src="img/featured-img-3.jpg" alt="Ride a desert motorcross bike or a dune buggy, or you'd be driven by the pros">
         </div>
       </article>
     </section>
@@ -293,7 +321,7 @@
     <footer id="site-footer">
     <div class="row no-gutters pad-left pad-right">
       <div class="col-lg-6 logo-socials">
-        <a class="logo" href="#"><img src="img/wlth-logo-full.png" alt="WLTH+"></a>
+        <a class="logo" href="#"><img src="img/logo-footer.svg" alt="WLTH+"></a>
         <nav id="social-links">
           <ul>
             <li><a href="#"><img src="img/fb.svg" alt="Facebook logo"></a></li>
@@ -349,7 +377,7 @@
 </div>
 <nav id="mobile-menu">
     <nav class="main-navigation">
-      <a class="site-logo" href="index.html"><img src="img/wlth-logo-full.png" alt="WLTH" title="WLTH"></a>
+      <a class="site-logo" href="index.html"><img src="img/logo-footer.svg" alt="WLTH" title="WLTH"></a>
       <ul>
         <li><a href="#">To your door</a></li>
         <li><a href="#">Going out</a></li>
@@ -367,16 +395,16 @@
           <div class="user-image">
             <img src="img/user.jpg" alt="Your profile picture" title="Your profile picture">
           </div>
-          <img class="down-arrow" src="img/down-arrow.png" alt="Down arrow">
+          <img class="down-arrow" src="img/down-arrow.svg" alt="Down arrow">
         </div>
       </div>
       <div class="actions">
         <button name="pin">
-          <img src="img/pin.png" alt="Pin icon">
+          <img src="img/pin.svg" alt="Pin icon">
           Pin this page
         </button>
         <button name="search">
-          <img src="img/search.png" alt="Search icon">
+          <img src="img/search.svg" alt="Search icon">
           Search this site
         </button>
       </div>

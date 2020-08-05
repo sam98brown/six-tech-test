@@ -389,7 +389,7 @@ p {
   background-color: white;
   z-index: 9;
   a.site-logo {
-    padding: 24px 19px;
+    padding: 25px 19px;
     margin-right: 50px;
     background-color: #f4f4f4;
     img {
@@ -472,7 +472,8 @@ nav.main-navigation {
 }
 
 #mobile-menu {
-  padding:20px;
+  padding:25px;
+  border-left: 1px solid rgba(122, 136, 144, 0.37);
   nav.main-navigation {
     flex-direction: column;
     a.site-logo {
@@ -488,8 +489,8 @@ nav.main-navigation {
           display: block;
           width: 100%;
           font-size: 19px;
-          padding: 10px 0px;
-          border-bottom: 1px solid $dark-grey;
+          padding: 15px 0px;
+          border-bottom: 1px solid rgba(122, 136, 144, 0.37);
         }
       }
     }
@@ -534,55 +535,61 @@ main#site-content {
         margin-right: 100px;
       }
     }
-    article#post-content {
+    .featured-post {
+      display: none;
+    }
+    .featured-post.post-id-1 {
+      display: block;
+    }
+    article.post-content {
       .post-card {
         padding-right: 50px;
-      }
-      
-      nav {
-        margin-top: 200px;
-        padding-bottom: 50px;
-        ul {
-          margin:0;
-          padding:0;
+      }    
+    }
+    nav {
+      margin-top: 200px;
+      padding-bottom: 50px;
+      ul {
+        margin:0;
+        padding:0;
+        display: flex;
+        list-style: none;
+        li {
+          width: 40px;
+          height: 40px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: white;
           display: flex;
-          list-style: none;
-          li {
-            width: 40px;
-            height: 40px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 50%;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            &:not(.active):hover button {
-              background-color: lighten($blue, 50%);
-              transition: all 0.25s;
-            }
-            &:last-of-type {
-              margin-right: 0px;
-            }
-            &.active {
-              background-color: $blue;
-              button {
-                color:white;
-              }
-            }
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          &:not(.active):hover button {
+            background-color: lighten($blue, 50%);
+            transition: all 0.25s;
+          }
+          &:last-of-type {
+            margin-right: 0px;
+          }
+          &.active {
+            background-color: $blue;
             button {
-              background: none;
-              border: none;
-              color:$dark-grey;
-              width: 40px;
-              height: 40px;  
-              transition: all 0.25s;
+              color:white;
             }
+          }
+          button {
+            background: none;
+            border: none;
+            color:$dark-grey;
+            width: 40px;
+            height: 40px;  
+            transition: all 0.25s;
           }
         }
       }
     }
+
   }
   section#popular {
     padding-top: 100px;
@@ -926,12 +933,11 @@ body {
   .post-card img {
     max-height: 500px;
   }
-
   main#site-content {
     section#featured {
-      article#post-content {
+      article.post-content {
         flex-direction: column-reverse;
-        padding-right: $container-padding;
+        padding-right: 30px;
         nav {
           margin-top: 50px;
         }
